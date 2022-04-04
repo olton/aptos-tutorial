@@ -13,8 +13,8 @@ async function main() {
     const bob = new Account()
 
     console.log("\n=== Addresses ===")
-    console.log(`Alice: ${alice.address()}. Key Seed: ${Buffer.from(alice.signingKey.secretKey).toString("hex").slice(0, 64)}`)
-    console.log(`Bob: ${bob.address()}. Key Seed: ${Buffer.from(bob.signingKey.secretKey).toString("hex").slice(0, 64)}`)
+    console.log(`Alice: ${alice.address()}. Key Seed: ${alice.seed()}`)
+    console.log(`Bob: ${bob.address()}. Key Seed: ${bob.seed()}`)
 
     await faucetClient.fundAccount(alice.authKey(), 5_000)
     await faucetClient.fundAccount(alice2.authKey(), 2_000)
@@ -25,7 +25,7 @@ async function main() {
     console.log(`Alice2: ${await restClient.accountBalance(alice2.address())}`)
     console.log(`Bob: ${await restClient.accountBalance(bob.address())}`)
 
-    // Have Alice give Bob 1000 coins
+    console.log("\n=== Alice give Bob 1000 coins ===");
     const txHash = await restClient.transfer(alice, bob.address(), 1000)
     await restClient.waitForTransaction(txHash)
 

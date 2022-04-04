@@ -19,6 +19,10 @@ export class Account {
         }
     }
 
+    seed(){
+        return Buffer.from(this.signingKey.secretKey).toString("hex").slice(0, 64)
+    }
+
     address(){
         return this.authKey()
     }
