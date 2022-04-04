@@ -1,0 +1,30 @@
+{
+  "name": "@olton/aptos-tutorial",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olton/aptos-tutorial.git"
+  },
+  "keywords": [
+    "aptos",
+    "tutorial"
+  ],
+  "author": "Serhii Pimenov <serhii@pimenov.com.ua>",
+  "bugs": {
+    "url": "https://github.com/olton/aptos-tutorial/issues"
+  },
+  "homepage": "https://github.com/olton/aptos-tutorial#readme",
+  "license": "MIT",
+  "type": "module",
+  "source": "src/index.js",
+  "scripts": {},
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "bip39": "^3.0.4",
+    "js-sha3": "^0.8.0",
+    "node-fetch": "^3.2.3",
+    "tweetnacl": "^1.0.3"
+  },
+  "staticFiles": {},
+  "browserslist": []
+}
