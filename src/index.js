@@ -12,6 +12,8 @@ async function main() {
     const alice2 = new Account("fa2a1f23faa79711d6447cfece1484455d10d5cb7d0a7d00066a567d868a0a54")
     const bob = new Account()
 
+    console.log(await restClient.accountResources(alice2.address()))
+
     console.log("\n=== Addresses ===")
     console.log(`Alice: ${alice.address()}. Key Seed: ${alice.seed()}`)
     console.log(`Bob: ${bob.address()}. Key Seed: ${bob.seed()}`)

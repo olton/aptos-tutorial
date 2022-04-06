@@ -4,6 +4,7 @@ import { Buffer } from 'buffer'
 
 const {sign} = Nacl
 const {sha3_256} = SHA3
+const KEY_SIZE = 32
 
 export class Account {
     signingKey = {}
